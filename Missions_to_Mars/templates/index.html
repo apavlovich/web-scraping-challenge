@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+    div div div img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-right:auto;
+        margin-left:auto;}    
+    img {display:block;
+        max-width:100%;
+        height:100%;
+        margin-right:auto;
+        margin-left:auto;
+        margin-bottom:20px;
+        margin-top:20px;}
+    h2 {text-align:center;
+        font-size:auto;}
+    </style>
+</header>
+<body>  
+<div class="container">
+    <div class="row">
+        <h1> {{mars['Title & Paragraph']}} </h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6" style="width:100%; height:auto;margin-top:20px;margin: bottom 20px;">
+            {{mars['Mars Facts'] | safe}}
+        </div>
+        <div class="col-6">
+            <img src= "{{mars['Featured Image']}}">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <h4>"{{mars['Hemispheres'][0]['Title']}}"</h4>
+            <img src= "{{mars['Hemispheres'][0]["url"] | safe}}">
+        </div>
+        <div class="col-3">
+            <h4>"{{mars['Hemispheres'][1]['Title']}}"</h4>
+            <img src= "{{mars['Hemispheres'][1]["url"] | safe}}">
+        </div>
+        <div class="col-3">
+            <h4>"{{mars['Hemispheres'][2]['Title']}}"</h4>
+            <img src= "{{mars['Hemispheres'][2]["url"] | safe}}">
+        </div>    
+        <div class="col-3">
+            <h4>"{{mars['Hemispheres'][3]['Title']}}"</h4>
+            <img src= "{{mars['Hemispheres'][3]["url"] | safe}}">
+        </div>
+    </div>
+</div>
+
+
+</body>  
+</html>
